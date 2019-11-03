@@ -1,0 +1,176 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}
+    <title>美食系列</title>
+{% endblock %}
+
+{% block content %}
+        <ul class="breadnav clearfix">
+			<li class="bnav-item"><a href="index.html">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="meishi.html">美食系列</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="javascript:;">全部菜品</a></li>
+		</ul>
+		<div class="clearfix table-wrap" id="tab-span">
+                <span class="table-item table-active">全部菜品</span>
+                {% for type in type_list %}
+                    <span class="table-item">{{ type.type_name }}</span>
+                {% endfor %}
+                <span class="table-item">其他</span>
+			<div class="search clearfix">
+				<input class="inp-txt" type="text" name="address" value="输入关键字"
+				onfocus="if(this.value=='输入关键字'){this.value=''};this.style.color='black';"
+				onblur="if(this.value==''||this.value=='输入关键字'){this.value='输入关键字';this.style.color='gray';}" />
+				<input class="inp-btn" type="button" name="" id="" value="搜索" />
+			</div>
+		</div>
+		<div id="table-div">
+			<div class="table-pic table-show clearfix">
+				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic1.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">海鲜芝士大虾</h2>
+					<p class="ms-txt">价格：49元</p>
+				</a>
+				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic2.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">草莓布丁杯</h2>
+					<p class="ms-txt">价格：12元</p>
+				</a>
+				<a href="../new_html/meishi-con.html" class="ms-wrap">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic3.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">菲力黑椒牛排</h2>
+					<p class="ms-txt">价格：69元</p>
+				</a>
+				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic4.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">香煎排意面</h2>
+					<p class="ms-txt">价格：69元</p>
+				</a>
+				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic5.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">鲜香培根比萨</h2>
+					<p class="ms-txt">价格：59元/24寸</p>
+				</a>
+				<a href="../new_html/meishi-con.html" class="ms-wrap">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic6.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">番茄烩意面</h2>
+					<p class="ms-txt">价格：39元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a href="../new_html/meishi-con.html" class="ms-wrap">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic3.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">菲力黑椒牛排</h2>
+					<p class="ms-txt">价格：69元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic4.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">香煎排意面</h2>
+					<p class="ms-txt">价格：69元</p>
+				</a>
+				<a href="../new_html/meishi-con.html" class="ms-wrap">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic6.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">番茄烩意面</h2>
+					<p class="ms-txt">价格：39元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic5.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">鲜香培根比萨</h2>
+					<p class="ms-txt">价格：59元/24寸</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic2.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">草莓布丁杯</h2>
+					<p class="ms-txt">价格：12元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic2.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">草莓布丁杯</h2>
+					<p class="ms-txt">价格：12元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img src="/static/img/ms-pic1.jpg" alt="" />
+					</span>
+					<h2 class="ms-tit">海鲜芝士大虾</h2>
+					<p class="ms-txt">价格：49元</p>
+				</a>
+			</div>
+			<ul class="ms-paging clearfix">
+				<li><a href="javascript:;" class="pag-item">&lt;</a></li>
+				<li><a href="javascript:;" class="pag-item pag-active">1</a></li>
+				<li><a href="javascript:;" class="pag-item">2</a></li>
+				<li><a href="javascript:;" class="pag-item">3</a></li>
+				<li><a href="javascript:;" class="pag-item">4</a></li>
+				<li><a href="javascript:;" class="pag-item">&gt;</a></li>
+			</ul>
+		</div>
+
+{% endblock %}
+
+{% block script %}
+    	<script type="text/javascript">
+		//导航当前项切换
+		$(".nav-item").click(function(){
+			$(this).parent("li").siblings().children().removeClass("nav-active");
+			//点击对象的父级（li）的兄弟级（li）的子集（a）移除类
+			$(this).addClass("nav-active");
+			//给点击对象添加类
+		});
+		//美食系列当前项切换
+		$(".table-item").click(function(){
+			$(this).siblings().removeClass("table-active");
+			$(this).addClass("table-active");
+		});
+	    //美食系列table切换
+	    var oSpan = document.getElementById("tab-span");
+			var spans = oSpan.querySelectorAll("span");
+			var oDiv  = document.getElementById("table-div");
+			var divs = oDiv.querySelectorAll("div");
+			var last=spans[0];
+			for(var i=0;i<spans.length;i++){
+					spans[i].index=i;  //给每一个按钮添加一个自定义属性，存储的是他们对应的索引值；
+					spans[i].onclick=function(){
+						divs[last.index].style.display="none"; //上一个对应的div，让他隐藏
+						divs[this.index].style.display="block"; //当前点击按钮对应的div显示
+						last=this; 	//把上一次点击的对象更新成当前点击的对象
+					};
+				};
+	</script>
+{% endblock %}
+

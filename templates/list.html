@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+
+    列表：{{ list1 }}
+    <ul>
+        {% for i in list1 %}
+            <ul>
+                {% if i == 1 %}
+                <li style="color: green">这是1，{{ i }}</li>
+                {% else %}
+                <li style="color: red">这不是1,是{{ i}}</li>
+                {% endif %}
+            </ul>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
