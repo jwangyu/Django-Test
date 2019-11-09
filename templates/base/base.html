@@ -20,15 +20,16 @@
 		<div class="clearfix nav">
 			<a class="logo" href="javascript:;"></a>
 			<ul class="clearfix nav-wrap">
-				<li><a class="nav-item nav-active" href="/meishi/index">首页</a></li>
-				<li><a class="nav-item" href="{% url 'meishi:pinpai' %}">品牌故事</a></li>
-				<li><a class="nav-item" href="{% url 'meishi:meishi' %}">美食系列</a></li>
-				<li><a class="nav-item" href="{% url 'meishi:shop' %}">店面展示</a></li>
-				<li><a class="nav-item" href="{% url 'meishi:news' %}">新闻资讯</a></li>
-				<li><a class="nav-item" href="{% url 'meishi:about_us' %}">关于我们</a></li>
+				<li><a class="nav-item {{ index }}" href="/meishi/index">首页</a></li>
+				<li><a class="nav-item {{ pinpai }}" href="{% url 'meishi:pinpai' %}">品牌故事</a></li>
+				<li><a class="nav-item {{ meishi }}" href="{% url 'meishi:meishi' %}">美食系列</a></li>
+				<li><a class="nav-item {{ shop }}" href="{% url 'meishi:shop' %}">店面展示</a></li>
+				<li><a class="nav-item {{ news }}" href="{% url 'meishi:news' %}">新闻资讯</a></li>
+				<li><a class="nav-item {{ about_us }}" href="{% url 'meishi:about_us' %}">关于我们</a></li>
 			</ul>
+
 		</div>
-		
+		{# nav-active是设置选中后的背景颜色，为每一个页面设置一个独立的nav_active就可以在选中该页面的时候显示背景色。设定页面值为nav-active在view中设置 #}
 		<div id="container">
 			<div id="buttons">
 		        <span index="1" class="on"></span>

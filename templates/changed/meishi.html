@@ -27,118 +27,34 @@
 		</div>
 		<div id="table-div">
 			<div class="table-pic table-show clearfix">
-				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic1.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">海鲜芝士大虾</h2>
-					<p class="ms-txt">价格：49元</p>
-				</a>
-				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic2.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">草莓布丁杯</h2>
-					<p class="ms-txt">价格：12元</p>
-				</a>
-				<a href="../new_html/meishi-con.html" class="ms-wrap">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic3.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">菲力黑椒牛排</h2>
-					<p class="ms-txt">价格：69元</p>
-				</a>
-				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic4.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">香煎排意面</h2>
-					<p class="ms-txt">价格：69元</p>
-				</a>
-				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic5.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">鲜香培根比萨</h2>
-					<p class="ms-txt">价格：59元/24寸</p>
-				</a>
-				<a href="../new_html/meishi-con.html" class="ms-wrap">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic6.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">番茄烩意面</h2>
-					<p class="ms-txt">价格：39元</p>
-				</a>
-			</div>
+            {% for type in type_list %}
+                {% for goods in type.goods_type_set.all %}
+                <a href="{% url 'meishi:meishi_detail' goods.goods.id %}" class="ms-wrap ms-right">
+                    <span class="ms-pic">
+                        <img src="/static/{{ goods.goods.image }}" alt="{{ goods.goods.goods_name }}" />
+                    </span>
+                    <h2 class="ms-tit">{{goods.goods.goods_name }}</h2>
+                    <p class="ms-txt">价格：{{ goods.goods.price }}</p>
+                </a>
+                 {% endfor %}
+            {% endfor    %}
+
+	</div>
+
+            {% for type in type_list %}
 			<div class="table-pic clearfix">
-				<a href="../new_html/meishi-con.html" class="ms-wrap">
+                {% for g in type.goods_type_set.all %}
+				<a href="{% url 'meishi:meishi_detail' g.goods.id %}" class="ms-wrap ms-right">
 					<span class="ms-pic">
-						<img src="/static/img/ms-pic3.jpg" alt="" />
+						<img src="/static/{{g.goods.image}}" alt="" />
 					</span>
-					<h2 class="ms-tit">菲力黑椒牛排</h2>
-					<p class="ms-txt">价格：69元</p>
+					<h2 class="ms-tit">{{ g.goods.goods_name }}</h2>
+					<p class="ms-txt">价格：{{ g.goods.price }}</p>
 				</a>
+				    {% endfor %}
 			</div>
-			<div class="table-pic clearfix">
-				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic4.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">香煎排意面</h2>
-					<p class="ms-txt">价格：69元</p>
-				</a>
-				<a href="../new_html/meishi-con.html" class="ms-wrap">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic6.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">番茄烩意面</h2>
-					<p class="ms-txt">价格：39元</p>
-				</a>
-			</div>
-			<div class="table-pic clearfix">
-				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic5.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">鲜香培根比萨</h2>
-					<p class="ms-txt">价格：59元/24寸</p>
-				</a>
-			</div>
-			<div class="table-pic clearfix">
-				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic2.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">草莓布丁杯</h2>
-					<p class="ms-txt">价格：12元</p>
-				</a>
-			</div>
-			<div class="table-pic clearfix">
-				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic2.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">草莓布丁杯</h2>
-					<p class="ms-txt">价格：12元</p>
-				</a>
-			</div>
-			<div class="table-pic clearfix">
-				<a href="../new_html/meishi-con.html" class="ms-wrap ms-right">
-					<span class="ms-pic">
-						<img src="/static/img/ms-pic1.jpg" alt="" />
-					</span>
-					<h2 class="ms-tit">海鲜芝士大虾</h2>
-					<p class="ms-txt">价格：49元</p>
-				</a>
-			</div>
-			<ul class="ms-paging clearfix">
-				<li><a href="javascript:;" class="pag-item">&lt;</a></li>
-				<li><a href="javascript:;" class="pag-item pag-active">1</a></li>
-				<li><a href="javascript:;" class="pag-item">2</a></li>
-				<li><a href="javascript:;" class="pag-item">3</a></li>
-				<li><a href="javascript:;" class="pag-item">4</a></li>
-				<li><a href="javascript:;" class="pag-item">&gt;</a></li>
-			</ul>
+            {% endfor %}
+
 		</div>
 
 {% endblock %}

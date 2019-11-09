@@ -11,6 +11,7 @@ urlpatterns = [
     path('about_us/',views.about_us,name='about_us'),
     path('base/',views.base,name='base'),
     path('demo/',views.demo,name='demo'),
+    path('meishi_detail/<int:id>',views.meishi_detail,name='meishi_detail')
     # path('base1/', views.base1, name='base1')
 
 ]

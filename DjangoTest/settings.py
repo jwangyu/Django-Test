@@ -125,3 +125,4 @@ STATICFILES_DIRS=[
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'static')
 MEDIA_URL='/media/'
+#最终上传的静态文件路径是os.path.join(MEDIA_ROOT,"media/image")虽然没有media文件夹，但是会在上传文件后自动创建。
